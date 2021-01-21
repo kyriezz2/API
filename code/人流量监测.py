@@ -1,9 +1,4 @@
 
-## 果蔬识别输入代码
-```
-'''
-# encoding:utf-8
-
 import requests
 import base64
 
@@ -13,24 +8,18 @@ import base64
 
 request_url = "https://aip.baidubce.com/rest/2.0/image-classify/v1/body_num"
 # 二进制方式打开图片文件
-f = open('[本地文件]', 'rb')
+f = open('human.jpg', 'rb')  #上传人流量图像
 img = base64.b64encode(f.read())
 
 params = {"image":img}
-access_token = '[调用鉴权接口获取的token]'
+access_token = '[此处输入你获取到的token]'
 request_url = request_url + "?access_token=" + access_token
 headers = {'content-type': 'application/x-www-form-urlencoded'}
 response = requests.post(request_url, data=params, headers=headers)
 if response:
     print (response.json())
-```
-
-## 输出代码
-
-```
-{
-    "log_id": 716033439,
-    "person_num": 16,
-    "image": "/9j/4AAoFS2P/9k="
-}
-```
+	
+	'''
+	输出
+	{'person_num': 14, 'log_id': 8386600918089470214}  #识别图像中的人流量数字结果
+	'''

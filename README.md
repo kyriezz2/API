@@ -239,7 +239,7 @@
 ### （一）	菜品识别（使用百度API）
 
 * 接口描述：该请求用于菜品识别。即对于输入的一张图片（可正常解码，且长宽比适宜），输出图片的菜品名称、卡路里信息、置信度。
-* 接口地址：https://aip.baidubce.com/rest/2.0/image-classify/v1/plant
+* 接口地址：https://aip.baidubce.com/rest/2.0/image-classify/v2/dish
 * 请求方式：POST
 * 详细代码展示：[菜品识别代码展示](./code/菜品识别.md)   
 * 百度api文档：[百度菜品识别api文档](https://ai.baidu.com/ai-doc/IMAGERECOGNITION/tk3bcxbb0)
